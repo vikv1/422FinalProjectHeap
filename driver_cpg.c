@@ -17,6 +17,7 @@
 
 extern void *_malloc( int size );  // you need to implement in heap.c
 extern void *_free( void *ptr );   // you need to implement in heap.c
+extern void printArray();
 
 int* alarmed;
 
@@ -59,18 +60,19 @@ int main( ) {
   void* mem7 = _malloc( 512 );
   printf( "mem7 = %x\n", mem7 );
 
-  _free( mem6 );
-  _free( mem5 );
-  _free( mem1 );
-  _free( mem7 );
-  _free( mem2 );
+  printf("freed %x\n", _free( mem6 ));
+  printf("freed %x\n", _free( mem5 ));
+  printf("freed %x\n", _free( mem1 ));
+  printf("freed %x\n", _free( mem7 ));
+  printf("freed %x\n", _free( mem2 ));
   
   void* mem8 = _malloc( 4096 );
   printf( "mem8 = %x\n", mem8 );
   
-  _free( mem4 );
-  _free( mem3 );
-  _free( mem8 );
+  printf("freed %x\n", _free( mem4 ));
+  printf("freed %x\n", _free( mem3 ));
+  printf("freed %x\n", _free( mem8 ));
+  printArray();
 
   /*
   alarmed = (int *)_malloc( 4 );

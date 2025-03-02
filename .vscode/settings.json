@@ -1,9 +1,0 @@
-{
-   "files.associations": {
-      "*.cpp": "cpp",
-      "stdio.h": "c",
-      "string.h": "c",
-      "signal.h": "c",
-      "unistd.h": "c"
-   }
-}
